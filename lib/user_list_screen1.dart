@@ -57,12 +57,14 @@ class _UserListScreenState extends State<UserListScreen> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
+            heroTag: 'btn1',
             onPressed: () => _fetchUsers(),
             tooltip: 'Get More Users',
             child: const Icon(Icons.add),
           ),
           const SizedBox(width: 16),
           FloatingActionButton(
+            heroTag: 'btn2',
             onPressed: () async {
               await dbHelper.insertUsers(userList);
               userList.clear();
