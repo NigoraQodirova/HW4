@@ -65,6 +65,12 @@ class _UserListScreenState extends State<UserListScreen> {
           FloatingActionButton(
             onPressed: () async {
               await dbHelper.insertUsers(userList);
+              userList.clear();
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Data is saved to db'),
+                ),
+              );
             },
             tooltip: 'Store Data',
             child: const Icon(Icons.save),

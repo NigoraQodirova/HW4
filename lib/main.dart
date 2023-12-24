@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw4/user_list_screen2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'welcome_screen.dart';
 import 'home_screen.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/user_list1': (context) => const UserListScreen(),
-        // '/user_list2': (context) => const Screen2(),
+        '/user_list2': (context) => const DatabaseListScreen(),
       },
     );
   }
